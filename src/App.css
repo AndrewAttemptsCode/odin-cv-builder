@@ -23,6 +23,7 @@ main {
 
 .inputSection {
   grid-area: inputSection;
+  padding: 1rem;
 }
 
 .preview {
