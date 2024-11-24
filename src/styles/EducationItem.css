@@ -18,3 +18,15 @@
   flex-direction: column;
   gap: 0.5rem;
 }
+
+.btn-small {
+  margin-left: auto;
+  width: 30%;
+  cursor: pointer;
+}
+
+.compact {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
