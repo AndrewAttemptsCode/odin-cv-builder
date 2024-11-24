@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import '../../styles/EducationItem.css';
 
 export default function EducationItem({ education, onChange }) {
+
+  const [hideForm, setHideForm] = useState(false);
 
   function handleChange(event) {
     const {name, value} = event.target;
@@ -11,8 +14,22 @@ export default function EducationItem({ education, onChange }) {
     });
   }
 
-  return (
+  function handleHideClick() {
+    setHideForm(!hideForm);
+  }
+
+  return hideForm ? (
+    <div className="education-item compact">
+      <p>{education.schoolName}</p>
+      <button className='btn-small' onClick={handleHideClick}>
+        Show
+      </button>
+    </div>
+  ) : (
     <div className="education-item">
+      <button className='btn-small' onClick={handleHideClick}>
+        Hide
+      </button>
       <form>
         <label>
           School Name:
