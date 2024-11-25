@@ -29,6 +29,12 @@ export default function Education() {
     );
   }
 
+  function onRemoveItem(id) {
+    setEducationList((prevList) => 
+    prevList.filter((item) => (item.id !== id))
+    );
+  }
+
   return (
     <div className='education-info'>
       <h2>Education</h2>
@@ -36,7 +42,8 @@ export default function Education() {
         <EducationItem
           key={educationItem.id}
           education={educationItem}
-          onChange={(updatedItem) => updateEducationItem(educationItem.id, updatedItem)} 
+          onChange={(updatedItem) => updateEducationItem(educationItem.id, updatedItem)}
+          removeItem={() => onRemoveItem(educationItem.id)}
         />
       ))}
       <button
