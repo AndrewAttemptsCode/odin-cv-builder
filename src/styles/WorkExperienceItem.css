@@ -1,0 +1,32 @@
+.work-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+  background-color: #f8fafc;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.work-item input {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  padding: 5px;
+}
+
+.work-item form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.btn-small {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.compact {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
