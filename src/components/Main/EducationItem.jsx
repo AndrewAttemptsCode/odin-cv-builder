@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../../styles/EducationItem.css';
 
-export default function EducationItem({ education, onChange }) {
+export default function EducationItem({ education, onChange, removeItem }) {
 
   const [hideForm, setHideForm] = useState(false);
 
@@ -77,6 +77,7 @@ export default function EducationItem({ education, onChange }) {
           />
         </label>
       </form>
+      <button className='btn-small' onClick={removeItem}>Remove</button>
     </div>
   );
 }
