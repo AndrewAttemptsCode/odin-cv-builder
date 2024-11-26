@@ -14,6 +14,38 @@ export default function WorkExperienceItem({ work, onChange, removeItem }) {
     });
   }
 
+  function handleResponsibility(event, index) {
+    const updatedResponsibilities = [...work.responsibilities];
+    updatedResponsibilities[index] = event.target.value;
+    
+    onChange({
+      ...work,
+      responsibilities: updatedResponsibilities,
+    });
+  }
+
+  function handleAddNewResponsibility(event) {
+    event.preventDefault();
+
+    onChange({
+      ...work,
+      responsibilities: [...work.responsibilities, ""],
+    })
+  }
+
+  function handleRemoveResponsibility(event, index) {
+    event.preventDefault();
+
+    const updatedResponsibilities = work.responsibilities.filter(
+      (_, i) => i !== index);
+
+    onChange({
+      ...work,
+      responsibilities: updatedResponsibilities,
+    })
+
+  }
+
   function handleHideClick() {
     setHideForm(!hideForm);
   }
@@ -76,8 +108,25 @@ export default function WorkExperienceItem({ work, onChange, removeItem }) {
           onChange={handleChange}
           />
         </label>
-      </form>
-      <button className="btn-small" onClick={removeItem}>Remove</button>
+        <div className="compact">
+          <span>
+            Responsibilities:
+          </span>
+          <button onClick={handleAddNewResponsibility}>+ add</button>
+        </div>
+        {work.responsibilities.map((responsibility, index) => (
+          <div key={index} className="responsibility-item">
+            <div className="compact">
+              <label htmlFor={`responsibility-${index}`}>
+                Responsibility {index + 1}:
+              </label>
+              <button className="btn-small" onClick={(event) => handleRemoveResponsibility(event, index)}>-</button>
+            </div>
+            <input id={`responsibility-${index}`} type="text" value={responsibility} onChange={(event) => handleResponsibility(event, index)} />
+          </div>
+        ))}
+    </form>
+    <button className="btn-small" onClick={removeItem}>Remove Work</button>
     </div>
   );
 }
