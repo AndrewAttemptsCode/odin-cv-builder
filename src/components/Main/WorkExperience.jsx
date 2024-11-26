@@ -31,7 +31,7 @@ export default function WorkExperience() {
         position: "",
         startDate: "",
         endDate: "",
-        responsibilities: [],
+        responsibilities: [""],
       }
     ])
   }
