@@ -1,9 +1,9 @@
 import CvPreview from "./CvPreview";
 
-export default function PreviewSection() {
+export default function PreviewSection({ personalInfo }) {
   return (
     <section className="preview">
-      <CvPreview />
+      <CvPreview personalInfo={personalInfo} />
     </section>
   );
 }

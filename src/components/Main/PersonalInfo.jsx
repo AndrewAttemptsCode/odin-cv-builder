@@ -1,9 +1,6 @@
 import '../../styles/PersonalInfo.css';
-import { useState } from 'react';
-import { cvData } from './data';
 
-export default function PersonalInfo() {
-  const [personalInfo, setPersonalInfo] = useState(cvData[0].personalInfo);
+export default function PersonalInfo({ personalInfo, setPersonalInfo }) {
 
   function handleChange(event) {
     const { name, value } = event.target;
