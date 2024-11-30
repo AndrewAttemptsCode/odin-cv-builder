@@ -4,6 +4,7 @@
   min-height: 100%;
   background: #fefefe;
   padding: 2rem;
+  gap: 20px;
 }
 
 .cv-personal-info {
@@ -14,4 +15,28 @@
 
 .cv-fullname {
   font-size: 2rem;
+}
+
+.cv-education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.cv-education-name {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+hr {
+  margin-top: 0.5rem;
+}
+
+.thick-rule {
+  border: none;
+  height: 0.2rem;
+  background: linear-gradient(to right, #000, #555, #000);
 }
