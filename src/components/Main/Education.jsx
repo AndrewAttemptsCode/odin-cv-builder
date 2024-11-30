@@ -1,13 +1,9 @@
 import '../../styles/Education.css';
 import EducationItem from './EducationItem';
-import { useState } from "react";
-import { cvData } from "./data";
 
 let idIndex = 1;
 
-export default function Education() {
-
-  const [educationList, setEducationList] = useState(cvData[0].education);
+export default function Education({ educationList, setEducationList }) {
 
   function addEducationItem() {
 
