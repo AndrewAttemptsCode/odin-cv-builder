@@ -1,7 +1,7 @@
 import "../../styles/WorkExperience.css"
 import WorkExperienceItem from "./WorkExperienceItem";
 
-let idIndex = 1;
+let idIndex = 2;
 
 export default function WorkExperience({ workList, setWorkList }) {
 

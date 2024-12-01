@@ -1,7 +1,7 @@
 import '../../styles/Education.css';
 import EducationItem from './EducationItem';
 
-let idIndex = 1;
+let idIndex = 2;
 
 export default function Education({ educationList, setEducationList }) {
 
