@@ -22,18 +22,24 @@
   font-size: 2rem;
 }
 
-.cv-education-header {
+.cv-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 0.5rem;
 }
 
-.cv-education-name {
+.cv-name {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 0.5rem;
+}
+
+.cv-list {
+  margin-top: 0.5rem;
+  padding-left: 0;
+  list-style-position: inside;
 }
 
 hr {
