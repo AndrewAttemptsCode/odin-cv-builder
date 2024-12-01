@@ -1,13 +1,9 @@
-import { useState } from "react";
-import { cvData } from "./data";
 import "../../styles/WorkExperience.css"
 import WorkExperienceItem from "./WorkExperienceItem";
 
 let idIndex = 1;
 
-export default function WorkExperience() {
-
-  const [workList, setWorkList] = useState(cvData[0].workExperience);
+export default function WorkExperience({ workList, setWorkList }) {
 
   function updateWorkItem(id, updatedItem) {
     setWorkList((prevList) => 
