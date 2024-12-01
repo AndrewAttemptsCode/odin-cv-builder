@@ -1,11 +1,14 @@
 import "../../styles/CvPreview.css";
+import iconEmail from "../../images/icon-email.png";
+import iconLocation from "../../images/icon-location.png";
+import iconGithub from "../../images/icon-github.png";
 
 export default function CvPreview({ personalInfo, educationList }) {
   return (
     <div className="cv-preview">
       <section className="cv-personal-info">
         <h1 className="cv-fullname">{personalInfo.firstName} {personalInfo.lastName}</h1>
-        <p>{personalInfo.location} | {personalInfo.email} | github.com/{personalInfo.github}</p>
+        <p><img src={iconLocation} alt="" /> {personalInfo.location} | <img src={iconEmail} alt="" /> {personalInfo.email} | <img src={iconGithub} alt="" /> {personalInfo.github}</p>
       </section>
 
       <section className="cv-education-info">
